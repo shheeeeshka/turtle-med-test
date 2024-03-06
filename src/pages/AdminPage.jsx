@@ -30,6 +30,8 @@ const AdminPage = () => {
         ['clean']                                         // remove formatting button
     ];
 
+    // https://quilljs.com/docs/modules/toolbar  -  документация по quill js
+
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
@@ -86,6 +88,7 @@ const AdminPage = () => {
             />
 
             <ArticleExampleComponent content={articleContent} />
+            {/* компонент для отображения статьи в админ панели (для самой статьи - ArticlePage) */}
         </>
     );
 }

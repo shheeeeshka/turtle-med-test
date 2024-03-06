@@ -27,12 +27,13 @@ const AccreditationPage = () => {
             </ul>
             <div className="test-var">
                 <Button variant="outline-primary"
-                    onClick={() => navigate('/test?withTimer=false')}
+                    onClick={() => navigate('/test?withTimer=false')} // withTimer - булевое значение, отвечающее за наличие таймера в тесте
                 >
                     Тренировка
                 </Button>
                 <Button
                     onClick={() => navigate('/test?withTimer=true&&modifiable=false')}
+                // modifiable - булевое значение, отвечающее за возможность изменения времени таймера в тесте (дефолтное время устанавливается в самом тесте, если оно не указано вручную)
                 >
                     Зачёт
                 </Button>
@@ -40,5 +41,7 @@ const AccreditationPage = () => {
         </div>
     );
 }
+
+// обратите внимание, что ссылки на тесты ведут на страницу TestPage, а не напрямую на TestComponent
 
 export default AccreditationPage;

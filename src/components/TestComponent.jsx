@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Spinner from "react-bootstrap/Spinner"
 import Button from "react-bootstrap/esm/Button";
 
-const Test = ({ withTimer = false, modifiable = true, interval }) => {
+const Test = ({ withTimer, modifiable, interval }) => {
     const [tests, setTests] = useState([]);
     const [check, setCheck] = useState(null);
     const [isLoading, setIsLoading] = useState(true);

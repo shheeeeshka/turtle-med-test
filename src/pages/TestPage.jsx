@@ -8,13 +8,11 @@ const TestPage = () => {
     const modifiable = searchParams.get('modifiable') === 'true';
     const interval = searchParams.get('interval');
 
-    console.log(interval);
-
     return (
         <Test
             withTimer={wT ?? false}
             modifiable={modifiable ?? true}
-            interval={interval}
+            interval={interval} // блоки (1-100), (101-200) и тд
         />
     );
 }
