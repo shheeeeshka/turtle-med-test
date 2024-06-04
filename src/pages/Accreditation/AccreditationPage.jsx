@@ -1,3 +1,5 @@
+import styles from "./AccreditationPage.module.css";
+
 import { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button"
 import { useNavigate } from "react-router-dom";
@@ -7,12 +9,12 @@ const AccreditationPage = () => {
     const [blocks, setBlocks] = useState([]);
 
     useEffect(() => {
-        setBlocks(["1-100", "101-200", "201-300", "301-400", "1-100", "101-200", "201-300", "301-400", "1-100", "101-200", "201-300", "301-400", "1-100", "101-200", "201-300", "301-400"]);
+        setBlocks(["1-100", "101-200", "201-300", "301-400", "401-500", "501-600", "701-800", "901-1000", "1001-1100", "1101-1200", "1201-1300", "1301-1400", "1401-1500", "1501-1600", "1601-1700", "1701-1800"]);
     }, []);
 
     return (
-        <div className="accr-wrap">
-            <ul className="theme-blocks">
+        <div className={styles["accr-wrap"]}>
+            <ul className={styles["theme-blocks"]}>
                 {
                     blocks?.map((interval, i) => (
                         <li key={i}>
@@ -25,15 +27,15 @@ const AccreditationPage = () => {
                     ))
                 }
             </ul>
-            <div className="test-var">
+            <div className={styles["test-var"]}>
                 <Button variant="outline-primary"
-                    onClick={() => navigate('/test?withTimer=false')} // withTimer - булевое значение, отвечающее за наличие таймера в тесте
+                    onClick={() => navigate('/test?withTimer=false')} // withTimer - boolean value responsible for the presence of a timer in the test
                 >
                     Тренировка
                 </Button>
                 <Button
                     onClick={() => navigate('/test?withTimer=true&&modifiable=false')}
-                // modifiable - булевое значение, отвечающее за возможность изменения времени таймера в тесте (дефолтное время устанавливается в самом тесте, если оно не указано вручную)
+                // modifiable - boolean value responsible for ability to modify timer (default time is set in TestComponent if it's not set manually)
                 >
                     Зачёт
                 </Button>
@@ -41,7 +43,5 @@ const AccreditationPage = () => {
         </div>
     );
 }
-
-// обратите внимание, что ссылки на тесты ведут на страницу TestPage, а не напрямую на TestComponent
 
 export default AccreditationPage;

@@ -1,0 +1,33 @@
+.accr-wrap {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+ul.theme-blocks {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+ul.theme-blocks>li>button {
+    height: 100px;
+    width: 100px;
+    background: grey;
+    border: none;
+    border-radius: 90%;
+}
+
+.test-var {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+@media (max-width: 500px) {
+    .accr-wrap {
+        width: 72%;
+    }
+}

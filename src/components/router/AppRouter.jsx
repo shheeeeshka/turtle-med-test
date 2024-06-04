@@ -1,13 +1,13 @@
 import { Route, Routes } from "react-router-dom";
 
-import Layout from "../Layout"; // Базовая разметка
-import AdminPage from "../../pages/AdminPage"; // Админка
+import Layout from "../Layout/Layout"; // Базовая разметка
+import AdminPage from "../../pages/Admin/AdminPage"; // Админка
 import ArticlesPage from "../../pages/ArticlesPage"; // Страница со ссылками на статьи
-import NewsPage from "../../pages/NewsPage"; // Страница с новостями
-import DiseasePage from "../../pages/DiseasePage"; // Промежуточная страница между ArticlesPage и ArticlePage
+import NewsPage from "../../pages/News/NewsPage"; // Страница с новостями
+import DiseasePage from "../../pages/Disease/DiseasePage"; // Промежуточная страница между ArticlesPage и ArticlePage
 import ArticlePage from "../../pages/ArticlePage"; // Страница статьи (шаблон)
-import AccreditationPage from "../../pages/AccreditationPage";
-import TestPage from "../../pages/TestPage";
+import AccreditationPage from "../../pages/Accreditation/AccreditationPage";
+import TestPage from "../../pages/Test/TestPage";
 
 const AppRouter = () => {
     return (
@@ -21,7 +21,7 @@ const AppRouter = () => {
                 <Route path="/accreditation" element={<AccreditationPage />} />
                 <Route path="/test" element={<TestPage />} />
             </Route>
-            <Route path="*" element={<></>} />
+            <Route path="*" element={<AccreditationPage />} />
         </Routes>
     );
 }

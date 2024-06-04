@@ -1,0 +1,43 @@
+.links-list>section>h3 {
+    border-bottom: 1px solid #000;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+
+section.article-type-links {
+    margin-bottom: 2rem;
+}
+
+.article-list-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+ul.article-list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.article-list-link {
+    text-decoration: none;
+    color: #000;
+    font-size: 0.9375rem;
+    transition: 0.5s;
+}
+
+.article-list-link:hover {
+    color: #358ec1;
+}
+
+.article-list-link:not(:hover) {
+    transition: 0.8s;
+}
+
+@media (max-width: 540px) {
+    .article-list-container {
+        display: block;
+    }
+}

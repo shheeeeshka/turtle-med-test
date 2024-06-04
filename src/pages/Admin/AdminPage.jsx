@@ -1,9 +1,10 @@
-import { useState } from 'react';
-import ReactQuill from "react-quill";
-import 'react-quill/dist/quill.snow.css';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import ArticleExampleComponent from '../components/ArticleExComponent';
+import ArticleExampleComponent from '../../components/ArticleExComponent';
+
+import 'react-quill/dist/quill.snow.css';
+import ReactQuill from "react-quill";
+import { useState } from 'react';
 
 const AdminPage = () => {
     const [show, setShow] = useState(false);

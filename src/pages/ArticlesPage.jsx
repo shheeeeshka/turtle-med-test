@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import ArticleList from "../components/ArticleList";
+import ArticleList from "../components/ArticleList/ArticleList";
 
 const ArticlesPage = () => {
     const [articleLinks, setArticleLinks] = useState([]);
@@ -53,7 +53,7 @@ const ArticlesPage = () => {
             { title: "Операция", type: "operation" },
             { title: "Педиатрия", type: "pediatrics" }
         ]);
-    }, [])
+    }, []);
 
     // вместо статичной установки, обращаться к бд
 

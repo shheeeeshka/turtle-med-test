@@ -1,5 +1,5 @@
 import { useSearchParams } from "react-router-dom";
-import Test from "../components/TestComponent";
+import Test from "../../components/TestComponent/TestComponent";
 
 const TestPage = () => {
     const [searchParams] = useSearchParams();
@@ -12,7 +12,7 @@ const TestPage = () => {
         <Test
             withTimer={wT ?? false}
             modifiable={modifiable ?? true}
-            interval={interval} // блоки (1-100), (101-200) и тд
+            interval={interval}
         />
     );
 }

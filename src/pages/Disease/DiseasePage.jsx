@@ -1,3 +1,5 @@
+import "./DiseasePage.css";
+
 import { useEffect, useState } from "react";
 import Button from "react-bootstrap/esm/Button";
 import Collapse from "react-bootstrap/esm/Collapse";

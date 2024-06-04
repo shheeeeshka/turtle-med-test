@@ -1,0 +1,23 @@
+ul.img-article-list {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.img-article-description>a>span {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.img-article-list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-article-list-link {
+    text-decoration: none;
+    color: #000;
+}
